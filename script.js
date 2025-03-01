@@ -8,17 +8,47 @@ console.log(username_input);
 
 //const username = Westside
 //const password = Esanside
-const checkUser = (username,password) => {
+    const popup = document.getElementById('pop-up');
+    const popupTitle = document.getElementById('popup-title');
+    const popupDetail = document.getElementById('popup-detail');
+    const overlay = document.getElementById('overlay');
+
+     const checkUser = (username,password) => {
     if (username ==='' || password ===''){
-        alert('Enter all Dipshit')
+        popupTitle.innerText = "ERROR";
+        popupTitle.style.color = "red";
+        popupDetail.innerText = "Please enter all";
+        popupDetail.style.color = "Whitesmoke";
+        popupDetail.style.textAlign = "center";
+        popup.style.display = "block";
+        overlay.style.display = "block";
+        //alert('Enter all Dipshit')
     }else if (username !="Westside" || password !="Esanside"){
-        alert('Wrong motherf#cker')
+        popupTitle.innerText = "ERROR";
+        popupTitle.style.color = "red";
+        popupDetail.innerText = "Wrong username or password";
+        popupDetail.style.color = "Whitesmoke";
+        popupDetail.style.textAlign = "center";
+        popup.style.display = "block";
+        overlay.style.display = "block";
+        //alert('Wrong motherf#cker')
     }else{
-        alert('Congrat lazy f#ck')
+        popupTitle.innerText = "Sign in";
+        popupTitle.style.color = "green";
+        popupDetail.innerText = "You are already sign in";
+        popupDetail.style.color = "Whitesmoke";
+        popupDetail.style.textAlign = "center";
+        popup.style.display = "block";
+        overlay.style.display = "block";
+        //alert('Congrat lazy f#ck')
     }
 }
 
+const closepopup = () =>{
+    popup.style.display = "none";
+    overlay.style.display = "none";
 
+}
 
 const login = () => {
     const username_input = document.getElementById("username").value;
