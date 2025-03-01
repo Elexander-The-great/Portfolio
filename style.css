@@ -70,7 +70,7 @@ button:hover {
     position:absolute;
     background: #000;
     opacity: 50%;
-    display: block;
+    display: none;
 }
 .pop-up{
     width: 200px;
@@ -79,6 +79,7 @@ button:hover {
     padding: 10px 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
 }
 
 #popup-title{
